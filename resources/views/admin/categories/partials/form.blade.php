@@ -1,12 +1,10 @@
 <label for="">Статус</label>
 <select class="form-control" name="published">
     @if (isset($category->id))
-        <option value="0">
-            @if ($category->published == 0) selected="" @endif
+        <option value="0" @if ($category->published == 0) selected="" @endif>
             Не опубликовано
         </option>
-        <option value="1">
-            @if ($category->published == 1) selected="" @endif
+        <option value="1" @if ($category->published == 1) selected="" @endif>
             Опубликовано
         </option>
     @else
@@ -24,7 +22,8 @@
     required>
 
 <label for="">Slug</label>
-<input class="form-control" type="text" name="slug" placegolder="Slug" value="{{ $category->slug ?? '' }}" readonly="">
+<input class="form-control" type="text" name="slug" placegolder="Slug" value="{{ $category->slug ?? '' }}"
+    readonly="">
 
 <label for="">Родительская категория</label>
 <select class="form-control" name="parent_id">
