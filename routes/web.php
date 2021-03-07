@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashbordController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', [DashbordController::class, 'dashbord'])->name('admin.index');
     Route::resource('/category', CategoryController::class, ['as' => 'admin']);
+    Route::resource('/article', ArticleController::class, ['as' => 'admin']);
 });

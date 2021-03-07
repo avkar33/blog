@@ -52,7 +52,7 @@
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuBlog" role="menu">
                                 <li><a class="dropdown-item" href="{{ route('admin.category.index') }}">Категории</a>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Матерьялы</a></li>
+                                <li><a class="dropdown-item" href="{{ route('admin.article.index') }}">Матерьялы</a></li>
 
                             </ul>
                         </div>
@@ -82,7 +82,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
