@@ -29,7 +29,8 @@
                                 action="{{ route('admin.article.destroy', $article) }}" method="post">
                                 <input type="hidden" name="_method" value="DELETE">
                                 {{ csrf_field() }}
-                                <a class ="btn btn-default" href="{{ route('admin.article.edit', $article) }}"><i class="fa fa-edit"></i></a>
+                                <a class="btn btn-default" href="{{ route('admin.article.edit', $article) }}"><i
+                                        class="fa fa-edit"></i></a>
 
                                 <button type="submit" class="btn"><i class="fa fa-trash-o"></i></button>
                             </form>
@@ -47,7 +48,7 @@
                 <tr>
                     <td colspan=3>
                         <ul class="pagination pull-right">
-                            {{ $articles->links() }}
+                            {{ $articles->links('vendor.pagination.bootstrap-4') }}
                         </ul>
                     </td>
                 </tr>
