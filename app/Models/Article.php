@@ -31,4 +31,14 @@ class Article extends Model
     {
         return $this->morphToMany(Category::class, 'categoryable');
     }
+
+    public function scopePublished($query, $published)
+    {
+        return $query->where('published', $published);
+    }
+
+    public function scopeOrderByCreated($query)
+    {
+        return $query->orderBy('created_at');
+    }
 }

@@ -40,10 +40,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                        <li>
+                            <a class="btn" href="{{route('admin.index')}}">Панель состояния</a>
+                        </li>
+                        <li>
                         <div class="dropdown">
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown link
+                                Меню
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuBlog" role="menu">
                                 <li><a class="dropdown-item" href="{{ route('admin.category.index') }}">Категории</a>
@@ -53,6 +57,7 @@
 
                             </ul>
                         </div>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -93,7 +98,7 @@
                 </div>
             </div>
         </nav>
-
+        
         <main class="py-4">
             @yield('content')
         </main>
