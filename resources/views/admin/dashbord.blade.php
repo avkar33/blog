@@ -27,7 +27,7 @@
 
         <div class="row">
             <div class="col-sm-6">
-                <a href="{{ route('admin.category.create') }}" class="btn btn-block btn-primary">Создать материал</a>
+                <a href="{{ route('admin.category.create') }}" class="btn btn-block btn-primary">Создать категорию</a>
                 <br>
                 <h4 class="text-center">Опубликованные категории:</h4>
                 @foreach ($categories as $category)
