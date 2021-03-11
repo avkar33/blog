@@ -29,3 +29,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('/category', CategoryController::class, ['as' => 'admin']);
     Route::resource('/article', ArticleController::class, ['as' => 'admin']);
 });
+
+Route::get('/', function () {
+    return view('blog.home');
+});
