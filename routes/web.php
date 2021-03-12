@@ -16,9 +16,6 @@ use App\Http\Controllers\Admin\ArticleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
