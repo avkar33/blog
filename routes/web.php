@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashbordController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Route::get('/', function () {
     return view('blog.home');
 });
+Route::get('/categories', [BlogController::class, 'categoryIndex'])->name('categories');
+Route::get('/blog/category/{slug?}', [BlogController::class, 'category'])->name('category');
+Route::get('/blog/article/{slug?}', [BlogController::class, 'article'])->name('article');
