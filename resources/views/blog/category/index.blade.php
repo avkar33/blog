@@ -8,11 +8,14 @@
                     <div class="card">
                         <h5 class="card-header text-center">{{ $category->title }}</h5>
                         <div class="card-body ">
-                            <a href="{{route('category', $category->slug)}}" class="btn btn-primary">Статьи</a>
+                            <a href="{{ route('category', $category->slug) }}" class="btn btn-primary">Статьи</a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
+        <ul class="pagination pull-right">
+            {{ $categories->links('vendor.pagination.bootstrap-4') }}
+        </ul>
     </div>
 @endsection
