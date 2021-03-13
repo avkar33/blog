@@ -54,10 +54,23 @@
                                 </li>
                                 <li><a class="dropdown-item" href="{{ route('admin.article.index') }}">Матерьялы</a>
                                 </li>
-
+                                <li><a class="dropdown-item" href="{{ route('admin.user_managment.user.index') }}">Пользователи</a>
+                                </li>
                             </ul>
                         </div>
                         </li>
+                        <li>
+                            <div class="dropdown">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Управление пользователями
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuBlog" role="menu">
+                                    <li><a class="dropdown-item" href="{{ route('admin.user_managment.user.index') }}">Пользователи</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\DashbordController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Admin\UserManagment\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', [DashbordController::class, 'dashbord'])->name('admin.index');
     Route::resource('/category', CategoryController::class, ['as' => 'admin']);
     Route::resource('/article', ArticleController::class, ['as' => 'admin']);
+    Route::group(['prefix' => 'user_managment'], function () {
+        Route::resource('/user', UserController::class, ['as' => 'admin.user_managment']);
+    });
 });
 
 Route::get('/', function () {

@@ -11,7 +11,7 @@ class BlogController extends Controller
     public function categoryIndex()
     {
         return view('blog.category.index', [
-            'categories' => Category::where('published', 1)->paginate(10)
+            'categories' => Category::where('published', 1)->paginate(6)
         ]);
     }
     public function category($slug)
